@@ -217,8 +217,10 @@ while ($queue !== []) {
 }
 
 ?>
+<br>
+<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4">
 
-<table class="facts_table">
+<table class="table table-bordered table-sm wt-table-individual dataTable">
     <thead>
         <tr>
             <th data-column-id=<?php echo I18N::translate("Generation") ?> data-type="numeric"><?php echo I18N::translate("Generation") ?></th>
@@ -290,28 +292,37 @@ while ($queue !== []) {
 
     </tbody>
 </table>
+
+</div>
 <br>
-<table class="facts_value">
+<table class="table table-bordered table-sm wt-table-individual dataTable">
     <thead>
-        <tr class="facts_value">
+        <tr>
             <th data-column-id=<?php echo I18N::translate("Number of complete / found individuals") ?> data-type="numeric"><?php echo I18N::translate("Number of complete / found individuals") ?></th>
-            <th data-column-id=<?php echo I18N::translate("Total males") ?> data-type="numeric"><?php echo I18N::translate("Total males") ?></th>
-            <th data-column-id=<?php echo I18N::translate("Total females") ?> data-type="numeric"><?php echo I18N::translate("Total females") ?></th>
-            <th data-column-id=<?php echo I18N::translate("Total dead") ?> data-type="numeric"><?php echo I18N::translate("Total dead") ?></th>
-            <th data-column-id=<?php echo I18N::translate("Total living") ?> data-type="numeric"><?php echo I18N::translate("Total living") ?></th>
-            <th data-column-id=<?php echo I18N::translate("Total births") ?> data-type="numeric"><?php echo I18N::translate("Total births") ?></th>
+            <th data-column-id=<?php echo I18N::translate("Males") ?> data-type="numeric"><?php echo I18N::translate("Males") ?></th>
+            <th data-column-id=<?php echo I18N::translate("Females") ?> data-type="numeric"><?php echo I18N::translate("Females") ?></th>
+            <th data-column-id=<?php echo I18N::translate("Alive") ?> data-type="numeric"><?php echo I18N::translate("Alive") ?></th>
+            <th data-column-id=<?php echo I18N::translate("Dead") ?> data-type="numeric"><?php echo I18N::translate("Dead") ?></th>
 	 </tr>
     </thead>
     <tbody>
 		<tr>
 		<td class="facts_value"><meter min="0" low="<?php echo $total/4;?>" high="<?php echo $total/2;?>" optimum="<?php echo $total;?>" max="<?php echo $total;?>" value="<?php echo $sum[$generation_val];?>"></meter><?php echo " ".$complet."/". $total.""; ?></td>
-		<td class="facts_value branchs-statistics-page"><?php echo $totalmale;?></td>
-		<td class="facts_value branchs-statistics-page"><?php echo $totalfemale;?></td>
-		<td class="facts_value branchs-statistics-page"><?php echo $totaldead;?></td>
-		<td class="facts_value branchs-statistics-page"><?php echo $totalalive;?></td>
-		<td class="facts_value branchs-statistics-page"><?php echo $totalbirth;?></td>
+		<td class="facts_value"><?php echo $totalmale;?></td>
+		<td class="facts_value"><?php echo $totalfemale;?></td>
+		<td class="facts_value"><?php echo $totalalive;?></td>
+		<td class="facts_value"><?php echo $totaldead;?></td>
 		</tr>
     </tbody>
+    <tfoot>
+        <tr>
+        <th colspan="16">
+        <span style="font-size: 0.75rem">
+        <?php echo I18N::translate("\"Complete\" means an individual with a media for birth or baptism, marriage and death."); ?>
+        </span>
+        </th>
+        </tr>
+    </tfoot>
 </table>
 <?php
 if (!empty($name_alive)) {
@@ -321,6 +332,7 @@ if (!empty($name_alive)) {
     }
     echo '</p>';
 }
+
 
     /**
      * Get the median of the year of birth by generation

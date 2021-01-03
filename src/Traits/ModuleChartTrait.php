@@ -25,7 +25,7 @@ trait ModuleChartTrait
 
     public function chartMenuClass(): string
     {
-        return 'menu-chart-branchstatistics';
+        return 'menu-chart-statistics';
     }
 
     public function chartBoxMenu(Individual $individual): ?Menu

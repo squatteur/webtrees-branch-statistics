@@ -329,9 +329,9 @@ while ($queue !== []) {
 </table>
 <?php
 if (!empty($name_alive)) {
-    echo "<p><b>".I18N::translate("Total living")."</b><br>";
+    echo "<p><br><b>".I18N::translate("Total living")."</b><br>";
     foreach ($name_alive as $key => $value) {
-        echo $value.'<br>';
+        echo e($key+1).': '. $value.'<br>';
     }
     echo '</p>';
 }

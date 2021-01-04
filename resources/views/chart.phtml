@@ -72,153 +72,156 @@ $generation_val = 0;
 $epok = array();
 $name_alive = array();
 
-$Fam = $individual->childFamilies();
-
 $ancestors = [1 => $individual];
 $queue = [1];
 $max = 2 ** ($generations - 1);
 
-// first individual
-if ($individual->isDead()) {
-    $totaldead++;
-} else {
-    $totalalive++;
-    $name_alive[] = '<a title="" href="'.$individual->url().'" class="name2">'
-    .$individual->fullName().'</a>';
-}
 
-switch ($individual->sex()) {
-    case 'M':
-        $totalmale++;
-        break;
-    case 'F':
-        $totalfemale++;
-        break;
-    default:
-        $totalunknown++;
-        break;
-}
-$total++;
-
-if ($individual->getBirthYear() !== null) {
-    $totalbirth++;
-    if (!empty($individual->getBirthYear() )) {
-        $epok[$generation_val][] = $individual->getBirthYear();
-    }
-}
-if ((findEventMedia($individual,'BIRT') || findEventMedia($individual,'CHR')) && (findEventMedia($individual,'FAMS') && (findEventMedia($individual,'DEAT') || findEventMedia($individual,'BURI')))) {
-    $complet++;
-}
-$city = $individual->getBirthPlace()->placeName();
-if ($city !== null) {
-    if (isset($cloud[$city])) {
-        $cloud[$city]++;
+if ($individual->canShowName()) {
+    // first individual
+    if ($individual->isDead()) {
+        $totaldead++;
     } else {
-        $cloud[$city] = 1;
+        $totalalive++;
+        $name_alive[] = '<a title="" href="'.$individual->url().'" class="name2">'
+        .$individual->fullName().' ('. $individual->xref() .')</a>';
     }
-}
 
-$sum[$generation_val]++;
-
-while ($queue !== []) {
-    $sosa_stradonitz_number = array_shift($queue);
-
-    
-
-    if ($sosa_stradonitz_number >= $max) {
-        break;
+    switch ($individual->sex()) {
+        case 'M':
+            $totalmale++;
+            break;
+        case 'F':
+            $totalfemale++;
+            break;
+        default:
+            $totalunknown++;
+            break;
     }
-    
-    $family = $ancestors[$sosa_stradonitz_number]->childFamilies()->first();
+    $total++;
 
-    $generation_val = (int)(log($sosa_stradonitz_number)/log(2)) + 1;
-    if ($family instanceof Family) {
-        if ($family->husband() instanceof Individual) {
-            $ancestors[$sosa_stradonitz_number * 2] = $family->husband();
-            $queue[] = $sosa_stradonitz_number * 2;
-            if ($family->husband()->isDead()) {
-                $totaldead++;
-            } else {
-                $totalalive++;
-                $name_alive[] = '<a title="" href="'.$family->husband()->url().'" class="name2">'
-                .$family->husband()->fullName().'</a>';
-            }
-            switch ($family->husband()->sex()) {
-                case 'M':
-                    $totalmale++;
-                    break;
-                case 'F':
-                    $totalfemale++;
-                    break;
-                default:
-                    $totalunknown++;
-                    break;
-            }
-            if ($family->husband()->getBirthYear() !== null) {
-                $totalbirth++;
-                if (!empty($family->husband()->getBirthYear() )) {
-                    $epok[$generation_val][] = $family->husband()->getBirthYear();
-                }
-            }
-            $city = $family->husband()->getBirthPlace()->placeName();
-            if ($city !== null) {
-                if (isset($cloud[$city])) {
-                    $cloud[$city]++;
-                } else {
-                    $cloud[$city] = 1;
-                }
-            }
-            if ((findEventMedia($family->husband(),'BIRT') || findEventMedia($family->husband(),'CHR')) && (findEventMedia($family->husband(),'FAMS') && (findEventMedia($family->husband(),'DEAT') || findEventMedia($family->husband(),'BURI')))) {
-                $complet++;
-            }
-            $sum[$generation_val]++;
-
-        }
-
-        if ($family->wife() instanceof Individual) {
-            $ancestors[$sosa_stradonitz_number * 2 + 1] = $family->wife();
-            $queue[] = $sosa_stradonitz_number * 2 + 1;
-            if ($family->wife()->isDead()) {
-                $totaldead++;
-            } else {
-                $totalalive++;
-                $name_alive[] = '<a title="" href="'.$family->wife()->url().'" class="name2">'
-                .$family->wife()->fullName().'</a>';
-            }
-            switch ($family->wife()->sex()) {
-                case 'M':
-                    $totalmale++;
-                    break;
-                case 'F':
-                    $totalfemale++;
-                    break;
-                default:
-                    $totalunknown++;
-                    break;
-            }
-            if ($family->wife()->getBirthYear() !== null) {
-                $totalbirth++;
-                if (!empty($family->wife()->getBirthYear() )) {
-                    $epok[$generation_val][] = $family->wife()->getBirthYear();
-                }
-            }
-            $city = $family->wife()->getBirthPlace()->placeName();
-            if ($city !== null) {
-                if (isset($cloud[$city])) {
-                    $cloud[$city]++;
-                } else {
-                    $cloud[$city] = 1;
-                }
-            }
-            if ((findEventMedia($family->wife(),'BIRT') || findEventMedia($family->wife(),'CHR')) && (findEventMedia($family->wife(),'FAMS') && (findEventMedia($family->wife(),'DEAT') || findEventMedia($family->wife(),'BURI')))) {
-                $complet++;
-            }
-
-            $sum[$generation_val]++;
+    if ($individual->getBirthYear() !== null) {
+        $totalbirth++;
+        if (!empty($individual->getBirthYear() )) {
+            $epok[$generation_val][] = $individual->getBirthYear();
         }
     }
-}
+    if ((findEventMedia($individual,'BIRT') || findEventMedia($individual,'CHR')) && (findEventMedia($individual,'FAMS') && (findEventMedia($individual,'DEAT') || findEventMedia($individual,'BURI')))) {
+        $complet++;
+    }
+    $city = $individual->getBirthPlace()->placeName();
+    if ($city !== null) {
+        if (isset($cloud[$city])) {
+            $cloud[$city]++;
+        } else {
+            $cloud[$city] = 1;
+        }
+    }
 
+    $sum[$generation_val]++;
+
+    while ($queue !== []) {
+        $sosa_stradonitz_number = array_shift($queue);
+
+        
+
+        if ($sosa_stradonitz_number >= $max) {
+            break;
+        }
+        
+        $family = $ancestors[$sosa_stradonitz_number]->childFamilies()->first();
+
+        $generation_val = (int)(log($sosa_stradonitz_number)/log(2)) + 1;
+        if ($family instanceof Family) {
+            if (($family->husband() instanceof Individual) && ($family->husband()->canShowName())) {
+                $ancestors[$sosa_stradonitz_number * 2] = $family->husband();
+                $queue[] = $sosa_stradonitz_number * 2;
+                if ($family->husband()->isDead()) {
+                    $totaldead++;
+                } else {
+                    $totalalive++;
+                    $name_alive[] = '<a title="" href="'.$family->husband()->url().'" class="name2">'
+                    .$family->husband()->fullName().' ('. $family->husband() .')</a>';
+                }
+                switch ($family->husband()->sex()) {
+                    case 'M':
+                        $totalmale++;
+                        break;
+                    case 'F':
+                        $totalfemale++;
+                        break;
+                    default:
+                        $totalunknown++;
+                        break;
+                }
+                if ($family->husband()->getBirthYear() !== null) {
+                    $totalbirth++;
+                    if (!empty($family->husband()->getBirthYear() )) {
+                        $epok[$generation_val][] = $family->husband()->getBirthYear();
+                    }
+                }
+                $city = $family->husband()->getBirthPlace()->placeName();
+                if ($city !== null) {
+                    if (isset($cloud[$city])) {
+                        $cloud[$city]++;
+                    } else {
+                        $cloud[$city] = 1;
+                    }
+                }
+                if ((findEventMedia($family->husband(),'BIRT') || findEventMedia($family->husband(),'CHR')) && (findEventMedia($family->husband(),'FAMS') && (findEventMedia($family->husband(),'DEAT') || findEventMedia($family->husband(),'BURI')))) {
+                    $complet++;
+                }
+                $sum[$generation_val]++;
+
+            }
+
+            if (($family->wife() instanceof Individual) && ($family->wife()->canShowName())) {
+                $ancestors[$sosa_stradonitz_number * 2 + 1] = $family->wife();
+                $queue[] = $sosa_stradonitz_number * 2 + 1;
+                if ($family->wife()->isDead()) {
+                    $totaldead++;
+                } else {
+                    $totalalive++;
+                    $name_alive[] = '<a title="" href="'.$family->wife()->url().'" class="name2">'
+                    .$family->wife()->fullName().' ('. $family->wife() .')</a>';
+                }
+                switch ($family->wife()->sex()) {
+                    case 'M':
+                        $totalmale++;
+                        break;
+                    case 'F':
+                        $totalfemale++;
+                        break;
+                    default:
+                        $totalunknown++;
+                        break;
+                }
+                if ($family->wife()->getBirthYear() !== null) {
+                    $totalbirth++;
+                    if (!empty($family->wife()->getBirthYear() )) {
+                        $epok[$generation_val][] = $family->wife()->getBirthYear();
+                    }
+                }
+                $city = $family->wife()->getBirthPlace()->placeName();
+                if ($city !== null) {
+                    if (isset($cloud[$city])) {
+                        $cloud[$city]++;
+                    } else {
+                        $cloud[$city] = 1;
+                    }
+                }
+                if ((findEventMedia($family->wife(),'BIRT') || findEventMedia($family->wife(),'CHR')) && (findEventMedia($family->wife(),'FAMS') && (findEventMedia($family->wife(),'DEAT') || findEventMedia($family->wife(),'BURI')))) {
+                    $complet++;
+                }
+
+                $sum[$generation_val]++;
+            }
+        }
+    }
+} else {
+    echo I18N::translate("Individual is not visible.");
+    exit();
+}
 ?>
 <br>
 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4">

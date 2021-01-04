@@ -141,7 +141,7 @@ if ($individual->canShowName()) {
                 } else {
                     $totalalive++;
                     $name_alive[] = '<a title="" href="'.$family->husband()->url().'" class="name2">'
-                    .$family->husband()->fullName().' ('. $family->husband() .')</a>';
+                    .$family->husband()->fullName().' ('. $family->husband()->xref() .')</a>';
                 }
                 switch ($family->husband()->sex()) {
                     case 'M':
@@ -183,7 +183,7 @@ if ($individual->canShowName()) {
                 } else {
                     $totalalive++;
                     $name_alive[] = '<a title="" href="'.$family->wife()->url().'" class="name2">'
-                    .$family->wife()->fullName().' ('. $family->wife() .')</a>';
+                    .$family->wife()->fullName().' ('. $family->wife()->xref() .')</a>';
                 }
                 switch ($family->wife()->sex()) {
                     case 'M':

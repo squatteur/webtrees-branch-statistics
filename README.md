@@ -14,13 +14,13 @@ If you are using ``git``, you could also clone the current master branch directl
 by calling:
 
 ```
-git clone https://github.com/squatteur/webtrees-branch_statistics.git
+git clone https://github.com/squatteur/webtrees-branch-statistics.git
 ```
 
 ### Manual installation
 To manually install the module, perform the following steps:
 
-1. Download the [latest release](https://github.com/squatteur/webtrees-branch_statistics/releases/latest).
+1. Download the [latest release](https://github.com/squatteur/webtrees-branch-statistics/releases/latest).
 2. Upload the downloaded file to your web server.
 3. Unzip the package into your ``modules_v4`` directory.
 4. Rename the folder to ``webtrees-branch-statistics``

@@ -83,7 +83,8 @@ if ($individual->isDead()) {
     $totaldead++;
 } else {
     $totalalive++;
-    $name_alive[] = $individual->fullName();
+    $name_alive[] = '<a title="" href="'.$individual->url().'" class="name2">'
+    .$individual->fullName().'</a>';
 }
 
 switch ($individual->sex()) {
@@ -139,7 +140,8 @@ while ($queue !== []) {
                 $totaldead++;
             } else {
                 $totalalive++;
-                $name_alive[] = $family->husband()->fullName();
+                $name_alive[] = '<a title="" href="'.$family->husband()->url().'" class="name2">'
+                .$family->husband()->fullName().'</a>';
             }
             switch ($family->husband()->sex()) {
                 case 'M':
@@ -180,7 +182,8 @@ while ($queue !== []) {
                 $totaldead++;
             } else {
                 $totalalive++;
-                $name_alive[] = $family->wife()->fullName();
+                $name_alive[] = '<a title="" href="'.$family->wife()->url().'" class="name2">'
+                .$family->wife()->fullName().'</a>';
             }
             switch ($family->wife()->sex()) {
                 case 'M':
@@ -326,9 +329,9 @@ while ($queue !== []) {
 </table>
 <?php
 if (!empty($name_alive)) {
-    echo "<p><br>".I18N::translate("Total living")." :</br>";
+    echo "<p><b>".I18N::translate("Total living")."</b><br>";
     foreach ($name_alive as $key => $value) {
-        echo ($key+1).' : '.$value.'<br>';
+        echo $value.'<br>';
     }
     echo '</p>';
 }

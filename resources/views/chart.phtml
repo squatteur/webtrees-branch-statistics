@@ -83,7 +83,7 @@ if ($individual->canShowName()) {
         $totaldead++;
     } else {
         $totalalive++;
-        if (stristr($individual->fullName())) {
+        if (stristr($individual->fullName(), $individual->xref())) {
             $name_alive[] = '<a title="" href="'.$individual->url().'" class="name2">'
             .$individual->fullName().'</a>';
         } else {
@@ -146,7 +146,7 @@ if ($individual->canShowName()) {
                     $totaldead++;
                 } else {
                     $totalalive++;
-                    if (stristr($family->husband()->fullName())) {
+                    if (stristr($family->husband()->fullName(), $family->husband()->xref())) {
                         $name_alive[] = '<a title="" href="'.$family->husband()->url().'" class="name2">'
                         .$family->husband()->fullName().'</a>';
                     } else {
@@ -193,7 +193,7 @@ if ($individual->canShowName()) {
                     $totaldead++;
                 } else {
                     $totalalive++;
-                    if (stristr($family->wife()->fullName())) {
+                    if (stristr($family->wife()->fullName(), $family->wife()->xref())) {
                         $name_alive[] = '<a title="" href="'.$family->wife()->url().'" class="name2">'
                         .$family->wife()->fullName().'</a>';
                     } else {

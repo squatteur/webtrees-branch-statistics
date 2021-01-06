@@ -83,8 +83,14 @@ if ($individual->canShowName()) {
         $totaldead++;
     } else {
         $totalalive++;
-        $name_alive[] = '<a title="" href="'.$individual->url().'" class="name2">'
-        .$individual->fullName().' ('. $individual->xref() .')</a>';
+        if (stristr($individual->fullName())) {
+            $name_alive[] = '<a title="" href="'.$individual->url().'" class="name2">'
+            .$individual->fullName().'</a>';
+        } else {
+            $name_alive[] = '<a title="" href="'.$individual->url().'" class="name2">'
+            .$individual->fullName().' ('. $individual->xref() .')</a>';
+        }
+
     }
 
     switch ($individual->sex()) {
@@ -140,8 +146,13 @@ if ($individual->canShowName()) {
                     $totaldead++;
                 } else {
                     $totalalive++;
-                    $name_alive[] = '<a title="" href="'.$family->husband()->url().'" class="name2">'
-                    .$family->husband()->fullName().' ('. $family->husband()->xref() .')</a>';
+                    if (stristr($family->husband()->fullName())) {
+                        $name_alive[] = '<a title="" href="'.$family->husband()->url().'" class="name2">'
+                        .$family->husband()->fullName().'</a>';
+                    } else {
+                        $name_alive[] = '<a title="" href="'.$family->husband()->url().'" class="name2">'
+                        .$family->husband()->fullName().' ('. $family->husband()->xref() .')</a>';
+                    }
                 }
                 switch ($family->husband()->sex()) {
                     case 'M':
@@ -182,8 +193,13 @@ if ($individual->canShowName()) {
                     $totaldead++;
                 } else {
                     $totalalive++;
-                    $name_alive[] = '<a title="" href="'.$family->wife()->url().'" class="name2">'
-                    .$family->wife()->fullName().' ('. $family->wife()->xref() .')</a>';
+                    if (stristr($family->wife()->fullName())) {
+                        $name_alive[] = '<a title="" href="'.$family->wife()->url().'" class="name2">'
+                        .$family->wife()->fullName().'</a>';
+                    } else {
+                        $name_alive[] = '<a title="" href="'.$family->wife()->url().'" class="name2">'
+                        .$family->wife()->fullName().' ('. $family->wife()->xref() .')</a>';
+                    }
                 }
                 switch ($family->wife()->sex()) {
                     case 'M':

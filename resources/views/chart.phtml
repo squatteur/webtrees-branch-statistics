@@ -278,13 +278,13 @@ if ($individual->canShowName()) {
                 $relationship = I18N::translate('Parents');
                 break;
             case '3':
-                $relationship = I18N::translate('Grandparent');
+                $relationship = I18N::translate('Grandparents');
                 break;
             case '4':
-                $relationship = I18N::translate('Great-grandparent');
+                $relationship = I18N::translate('Great-grandparents');
                 break;
             default:
-                $relationship = I18N::translate('Great ×%s grandparent', I18N::number($i-2));
+                $relationship = I18N::translate('Great ×%s grandparents', I18N::number($i-2));
                 break;
         }
         

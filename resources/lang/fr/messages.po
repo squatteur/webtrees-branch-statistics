@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Webtrees Branch Statistics\n"
-"POT-Creation-Date: 2021-01-24 01:32+0100\n"
-"PO-Revision-Date: 2021-01-24 01:33+0100\n"
+"POT-Creation-Date: 2021-01-25 00:03+0100\n"
+"PO-Revision-Date: 2021-01-25 00:03+0100\n"
 "Last-Translator: Bestel squatteur <bestel@squatteur.net>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -75,16 +75,16 @@ msgid "Parents"
 msgstr "Parents"
 
 #: resources/views/chart.phtml:281
-msgid "Grandparent"
+msgid "Grandparents"
 msgstr "Grands-parents"
 
 #: resources/views/chart.phtml:284
-msgid "Great-grandparent"
+msgid "Great-grandparents"
 msgstr "Arrière-grands-parents"
 
 #: resources/views/chart.phtml:287
 #, php-format
-msgid "Great ×%s grandparent"
+msgid "Great ×%s grandparents"
 msgstr "Arrière×%s grands-parents"
 
 #: resources/views/chart.phtml:314

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Webtrees Branch Statistics\n"
-"POT-Creation-Date: 2021-01-24 01:33+0100\n"
-"PO-Revision-Date: 2021-01-24 01:33+0100\n"
+"POT-Creation-Date: 2021-01-25 00:02+0100\n"
+"PO-Revision-Date: 2021-01-25 00:02+0100\n"
 "Last-Translator: Bestel squatteur <bestel@squatteur.net>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -34,11 +34,11 @@ msgstr "Branchenstatistik %s"
 
 #: resources/views/chart.phtml:20
 msgid "Individual"
-msgstr "Personen"
+msgstr "Person"
 
 #: resources/views/chart.phtml:29
 msgid "Generations"
-msgstr "Generation"
+msgstr "Generationen"
 
 #: resources/views/chart.phtml:39
 msgid "view"
@@ -54,7 +54,7 @@ msgstr "Generation"
 
 #: resources/views/chart.phtml:246
 msgid "Total individuals"
-msgstr "Kumulierte Personenanzahl"
+msgstr "Personenanzahl"
 
 #: resources/views/chart.phtml:247
 msgid "Total individuals (cumulative)"
@@ -77,16 +77,16 @@ msgid "Parents"
 msgstr "Eltern"
 
 #: resources/views/chart.phtml:281
-msgid "Grandparent"
+msgid "Grandparents"
 msgstr "Großeltern"
 
 #: resources/views/chart.phtml:284
-msgid "Great-grandparent"
+msgid "Great-grandparents"
 msgstr "Urgroßeltern"
 
 #: resources/views/chart.phtml:287
 #, php-format
-msgid "Great ×%s grandparent"
+msgid "Great ×%s grandparents"
 msgstr "×%s Urgroßeltern"
 
 #: resources/views/chart.phtml:314

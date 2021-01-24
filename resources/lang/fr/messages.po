@@ -1,0 +1,135 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webtrees Branch Statistics\n"
+"POT-Creation-Date: 2021-01-24 01:32+0100\n"
+"PO-Revision-Date: 2021-01-24 01:33+0100\n"
+"Last-Translator: Bestel squatteur <bestel@squatteur.net>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-SearchPath-0: resources/views/chart.phtml\n"
+"X-Poedit-SearchPath-1: src\n"
+"X-Poedit-SearchPath-2: module.php\n"
+
+#: src/Module.php:105 src/Module.php:215
+msgid "Branch statistics"
+msgstr "Statistiques de la branche d'un individu"
+
+#: src/Module.php:115
+msgid "Statistics of an individual’s ancestors."
+msgstr "Statistiques de la branche des ancêtres d’un individu."
+
+#: src/Module.php:218 src/Traits/ModuleChartTrait.php:38
+#, php-format
+msgid "Branch statistics of %s"
+msgstr "Statistiques de la branche de %s"
+
+#: resources/views/chart.phtml:20
+msgid "Individual"
+msgstr "Individu"
+
+#: resources/views/chart.phtml:29
+msgid "Generations"
+msgstr "Générations"
+
+#: resources/views/chart.phtml:39
+msgid "view"
+msgstr "afficher"
+
+#: resources/views/chart.phtml:235
+msgid "Individual is not visible."
+msgstr "L'individu n'est pas visible."
+
+#: resources/views/chart.phtml:245
+msgid "Generation"
+msgstr "Générations"
+
+#: resources/views/chart.phtml:246
+msgid "Total individuals"
+msgstr "Nombre d’individus"
+
+#: resources/views/chart.phtml:247
+msgid "Total individuals (cumulative)"
+msgstr "Nombre total d'individus (cumul)"
+
+#: resources/views/chart.phtml:248
+msgid "Time of life"
+msgstr "Époque de vie"
+
+#: resources/views/chart.phtml:249
+msgid "Ancestors"
+msgstr "Ancêtres"
+
+#: resources/views/chart.phtml:275
+msgid "Self"
+msgstr "Individu racine"
+
+#: resources/views/chart.phtml:278
+msgid "Parents"
+msgstr "Parents"
+
+#: resources/views/chart.phtml:281
+msgid "Grandparent"
+msgstr "Grands-parents"
+
+#: resources/views/chart.phtml:284
+msgid "Great-grandparent"
+msgstr "Arrière-grands-parents"
+
+#: resources/views/chart.phtml:287
+#, php-format
+msgid "Great ×%s grandparent"
+msgstr "Arrière×%s grands-parents"
+
+#: resources/views/chart.phtml:314
+msgid "Number of complete / found individuals"
+msgstr "Nombre d’individus traités/trouvés"
+
+#: resources/views/chart.phtml:315
+msgid "Males"
+msgstr "Hommes"
+
+#: resources/views/chart.phtml:316
+msgid "Females"
+msgstr "Femmes"
+
+#: resources/views/chart.phtml:317
+msgid "Alive"
+msgstr "Vivants"
+
+#: resources/views/chart.phtml:318
+msgid "Dead"
+msgstr "Décédés"
+
+#: resources/views/chart.phtml:334
+msgid ""
+"\"Complete\" means an individual with a media for birth/baptism, marriage "
+"and death/burial."
+msgstr ""
+"Un individu \"traité\" indique un individu avec un média pour la naissance/"
+"baptême, le mariage et le décès/ enterrement."
+
+#: resources/views/chart.phtml:342
+msgid "Living"
+msgstr "Individus vivants"
+
+#~ msgid "Statistics of %s"
+#~ msgstr "Statistiques de la branche de %s"
+
+#~ msgid "Branch Statistics"
+#~ msgstr "Statistiques de la branche d'un individu"
+
+#~ msgid "self"
+#~ msgstr "Individu racine"
+
+#~ msgid "Individuals"
+#~ msgstr "Individus"
+
+#~ msgid "Total living"
+#~ msgstr "Nombre d'individus vivant"

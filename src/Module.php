@@ -212,10 +212,10 @@ class Module extends AbstractModule implements ModuleCustomInterface, ModuleChar
      */
     private function getPageTitle(Individual $individual): string
     {
-        $title = I18N::translate('Fan chart');
+        $title = I18N::translate('Branch statistics');
 
         if ($individual && $individual->canShowName()) {
-            $title = I18N::translate('Branch Statistics of %s', $individual->fullName());
+            $title = I18N::translate('Branch statistics of %s', $individual->fullName());
         }
 
         return $title;

@@ -35,6 +35,6 @@ trait ModuleChartTrait
 
     public function chartTitle(Individual $individual): string
     {
-        return I18N::translate('Statistics of %s', $individual->fullName());
+        return I18N::translate('Branch statistics of %s', $individual->fullName());
     }
 }

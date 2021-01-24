@@ -50,8 +50,6 @@ use Fisharebest\Webtrees\Auth;
 //     $access_level = Auth::accessLevel($tree);
 // }
 
-//$generations = 18;
-
 $sum = [];
 for ($i=0; $i<$generations; $i++)
 {
@@ -183,7 +181,6 @@ if ($individual->canShowName()) {
                     $complet++;
                 }
                 $sum[$generation_val]++;
-
             }
 
             if (($family->wife() instanceof Individual) && ($family->wife()->canShowName())) {
@@ -275,33 +272,27 @@ if ($individual->canShowName()) {
         
         switch ($i+1) {
             case '1':
-                $relationship = I18N::translate('self');
+                $relationship = I18N::translate('Self');
                 break;
             case '2':
                 $relationship = I18N::translate('Parents');
                 break;
             case '3':
-                $relationship = I18N::translateContext('parent’s parent', 'grandparent');
+                $relationship = I18N::translate('Grandparent');
                 break;
             case '4':
-                $relationship = I18N::translateContext('parent’s parent’s parent', 'great-grandparent');
+                $relationship = I18N::translate('Great-grandparent');
                 break;
             default:
-                $relationship = I18N::translate('great ×%s grandparent', I18N::number($i));
+                $relationship = I18N::translate('Great ×%s grandparent', I18N::number($i-2));
                 break;
         }
         
-        //$relationship = FunctionsCharts::getSosaName($i + 2);
         $total = $total + $sum[$i];
-        if ($total_indi == 1) {
-            $text_total_indi = I18N::translate('Individual');
-        } else {
-            $text_total_indi = I18N::translate('Individuals');
-        }
         echo '
-        <tr class="facts_value"><td>'.($i+1).'</td>
-        <td><meter min="0" optimum="'.$indi.'" low="'.($indi/4).'" high="'.($indi/2).'" max="'.$indi.'" value="'.$sum[$i].'"></meter> '.$sum[$i].'/'.$indi.'</td>
-        <td>'.$total .'/'. ($total_indi).' '.$text_total_indi .'</td>
+        <tr class="facts_value"><td>'.($i).'</td>
+        <td><progress max="'.$indi.'" value="'.$sum[$i].'"></progress> '.$sum[$i].'/'.$indi.'</td>
+        <td>'.$total .'/'. ($total_indi).'</td>
         <td>'.$epoque.'</td>
         <td>'.$relationship;
         echo '</td></tr>';
@@ -348,7 +339,7 @@ if ($individual->canShowName()) {
 </table>
 <?php
 if (!empty($name_alive)) {
-    echo "<p><br><b>".I18N::translate("Total living")."</b><br>";
+    echo "<p><br><b>".I18N::translate("Living")."</b><br>";
     foreach ($name_alive as $key => $value) {
         echo e($key+1).': '. $value.'<br>';
     }

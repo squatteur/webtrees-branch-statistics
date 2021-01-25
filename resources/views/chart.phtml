@@ -5,6 +5,8 @@ use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\GedcomRecord;
 use Fisharebest\Webtrees\Auth;
+use Fisharebest\Webtrees\Date;
+use Fisharebest\Webtrees\Date\GregorianDate;
 
 ?>
 
@@ -104,10 +106,14 @@ if ($individual->canShowName()) {
     }
     $total++;
 
-    if ($individual->getBirthYear() !== null) {
+    if ($individual->getBirthDate() !== null) {
         $totalbirth++;
-        if (!empty($individual->getBirthYear() )) {
-            $epok[$generation_val][] = $individual->getBirthYear();
+        $bdate = $individual->getBirthDate();
+        if (!empty($bdate)) {
+            if ($bdate->isOK()) {
+                $date = new GregorianDate($bdate->minimumJulianDay());
+                $epok[$generation_val][] = $date->year;
+            }
         }
     }
     if ((findEventMedia($individual,'BIRT') || findEventMedia($individual,'CHR')) && (findEventMedia($individual,'FAMS') && (findEventMedia($individual,'DEAT') || findEventMedia($individual,'BURI')))) {
@@ -163,10 +169,14 @@ if ($individual->canShowName()) {
                         $totalunknown++;
                         break;
                 }
-                if ($family->husband()->getBirthYear() !== null) {
+                if ($family->husband()->getBirthDate() !== null) {
                     $totalbirth++;
-                    if (!empty($family->husband()->getBirthYear() )) {
-                        $epok[$generation_val][] = $family->husband()->getBirthYear();
+                    $bdate = $family->husband()->getBirthDate();
+                    if (!empty($bdate)) {
+                        if ($bdate->isOK()) {
+                            $date = new GregorianDate($bdate->minimumJulianDay());
+                            $epok[$generation_val][] = $date->year;
+                        }
                     }
                 }
                 $city = $family->husband()->getBirthPlace()->placeName();
@@ -209,10 +219,14 @@ if ($individual->canShowName()) {
                         $totalunknown++;
                         break;
                 }
-                if ($family->wife()->getBirthYear() !== null) {
+                if ($family->wife()->getBirthDate() !== null) {
                     $totalbirth++;
-                    if (!empty($family->wife()->getBirthYear() )) {
-                        $epok[$generation_val][] = $family->wife()->getBirthYear();
+                    $bdate = $family->wife()->getBirthDate();
+                    if (!empty($bdate)) {
+                        if ($bdate->isOK()) {
+                            $date = new GregorianDate($bdate->minimumJulianDay());
+                            $epok[$generation_val][] = $date->year;
+                        }
                     }
                 }
                 $city = $family->wife()->getBirthPlace()->placeName();

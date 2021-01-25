@@ -3,6 +3,8 @@
 # Branch statistics
 This modules provides others statistics by generation for the [webtrees](https://www.webtrees.net) genealogy application.
 
+*[Lire ce readme en français.](./README_fr.md)*
+
 ![branch statistics](assets/branch-statistics.png)
 
 
@@ -27,8 +29,7 @@ To manually install the module, perform the following steps:
 
 ## Enable module
 Go to the control panel (admin section) of your installation and scroll down to the ``Modules`` section. Click 
-on ``Charts`` (in subsection Genealogy). Enable the ``Branch statistics`` custom module (optionally disable the original
-installed fan chart module) and save your settings.
+on ``Charts`` (in subsection Genealogy). Enable the ``Branch statistics`` custom module and save your settings.
 
 ![Control panel - Module administration](assets/control-panel-modules.png)
 
@@ -37,4 +38,4 @@ installed fan chart module) and save your settings.
 At the charts' menu, you will find a new link called `Branch statistics`. Use the provided configuration options
 to adjust according to your needs.
 
-A ``complete individual`` indicates that he has a media for each of the following events: (BIRT or CHR) and (DEAT or BURI) and MARR
+A ``complete individual`` indicates that he has a media for each of the following events: (BIRT or CHR) and (DEAT or BURI) and FAMS

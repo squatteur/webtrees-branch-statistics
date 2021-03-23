@@ -26,7 +26,6 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
 use function app;
-use function assert;
 use function is_string;
 use function max;
 use function min;
@@ -84,7 +83,6 @@ class Module extends AbstractModule implements ModuleCustomInterface, ModuleChar
     public function boot(): void
     {
         $router_container = app(RouterContainer::class);
-        assert($router_container instanceof RouterContainer);
 
         $router_container->getMap()
             ->get(static::class, static::ROUTE_URL, $this)
@@ -152,10 +150,8 @@ class Module extends AbstractModule implements ModuleCustomInterface, ModuleChar
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $tree       = $request->getAttribute('tree');
-        assert($tree instanceof Tree);
         
         $xref       = $request->getAttribute('xref');
-        assert(is_string($xref));
 
         $individual = Registry::individualFactory()->make($xref, $tree);
         Auth::checkIndividualAccess($individual, false, true);

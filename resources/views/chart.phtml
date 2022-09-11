@@ -1,5 +1,6 @@
 <?php
 
+use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Family;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
@@ -407,7 +408,7 @@ if (!empty($name_alive)) {
     function getFirstFact(Individual $person = null, $tag)
     {
         foreach ($person->facts([], false, Auth::PRIV_HIDE, true) as $fact) {
-            if ($fact->getTag() === $tag) {
+            if ($fact->tag() === $tag) {
                 return $fact;
             }
         }
@@ -424,7 +425,7 @@ if (!empty($name_alive)) {
     function getFirstFactFam(Family $family = null, $tag)
     {
         foreach ($family->facts([], false, Auth::PRIV_HIDE, true) as $fact) {
-            if ($fact->getTag() === $tag) {
+            if ($fact->tag() === $tag) {
                 return $fact;
             }
         }

@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Webtrees Branch Statistics\n"
-"POT-Creation-Date: 2021-01-25 00:02+0100\n"
-"PO-Revision-Date: 2021-01-25 00:02+0100\n"
+"POT-Creation-Date: 2022-09-11 21:34+0200\n"
+"PO-Revision-Date: 2022-09-11 21:34+0200\n"
 "Last-Translator: Bestel squatteur <bestel@squatteur.net>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-KeywordsList: translate\n"
 "X-Poedit-SearchPath-0: module.php\n"
@@ -19,119 +19,119 @@ msgstr ""
 "X-Poedit-SearchPath-3: src/Traits/ModuleCustomTrait.php\n"
 "X-Poedit-SearchPath-4: resources/views/chart.phtml\n"
 
-#: src/Module.php:105 src/Module.php:215
+#: src/Module.php:103 src/Module.php:211
 msgid "Branch statistics"
-msgstr "Statistik der Branche einer Person"
+msgstr "Generationenstatistik"
 
-#: src/Module.php:115
+#: src/Module.php:113
 msgid "Statistics of an individual’s ancestors."
-msgstr "Statistik des Ahnenzweigs einer Person."
+msgstr "Statistik der Vorfahrengenerationen einer Person."
 
-#: src/Module.php:218 src/Traits/ModuleChartTrait.php:38
+#: src/Module.php:214 src/Traits/ModuleChartTrait.php:38
 #, php-format
 msgid "Branch statistics of %s"
-msgstr "Branchenstatistik %s"
+msgstr "Generationenstatistik von %s"
 
-#: resources/views/chart.phtml:20
+#: resources/views/chart.phtml:23
 msgid "Individual"
 msgstr "Person"
 
-#: resources/views/chart.phtml:29
+#: resources/views/chart.phtml:32
 msgid "Generations"
 msgstr "Generationen"
 
-#: resources/views/chart.phtml:39
+#: resources/views/chart.phtml:42
 msgid "view"
 msgstr "Anzeigen"
 
-#: resources/views/chart.phtml:235
+#: resources/views/chart.phtml:250
 msgid "Individual is not visible."
-msgstr "Einzelperson ist nicht sichtbar."
+msgstr "Person ist nicht sichtbar."
 
-#: resources/views/chart.phtml:245
+#: resources/views/chart.phtml:260
 msgid "Generation"
 msgstr "Generation"
 
-#: resources/views/chart.phtml:246
+#: resources/views/chart.phtml:261
 msgid "Total individuals"
-msgstr "Personenanzahl"
+msgstr "Personenzahl"
 
-#: resources/views/chart.phtml:247
+#: resources/views/chart.phtml:262
 msgid "Total individuals (cumulative)"
-msgstr "Kumulierte Personenanzahl"
+msgstr "Kumulierte Personenzahl"
 
-#: resources/views/chart.phtml:248
+#: resources/views/chart.phtml:263
 msgid "Time of life"
 msgstr "Lebenszeit"
 
-#: resources/views/chart.phtml:249
+#: resources/views/chart.phtml:264
 msgid "Ancestors"
 msgstr "Vorfahren"
 
-#: resources/views/chart.phtml:275
+#: resources/views/chart.phtml:290
 msgid "Self"
-msgstr "Proband"
+msgstr "Person selbst"
 
-#: resources/views/chart.phtml:278
+#: resources/views/chart.phtml:293
 msgid "Parents"
 msgstr "Eltern"
 
-#: resources/views/chart.phtml:281
+#: resources/views/chart.phtml:296
 msgid "Grandparents"
 msgstr "Großeltern"
 
-#: resources/views/chart.phtml:284
+#: resources/views/chart.phtml:299
 msgid "Great-grandparents"
 msgstr "Urgroßeltern"
 
-#: resources/views/chart.phtml:287
+#: resources/views/chart.phtml:302
 #, php-format
 msgid "Great ×%s grandparents"
 msgstr "×%s Urgroßeltern"
 
-#: resources/views/chart.phtml:314
+#: resources/views/chart.phtml:329
 msgid "Number of complete / found individuals"
 msgstr "Vollständige/vorhandene Personen"
 
-#: resources/views/chart.phtml:315
+#: resources/views/chart.phtml:330
 msgid "Males"
 msgstr "Männlich"
 
-#: resources/views/chart.phtml:316
+#: resources/views/chart.phtml:331
 msgid "Females"
 msgstr "Weiblich"
 
-#: resources/views/chart.phtml:317
+#: resources/views/chart.phtml:332
 msgid "Alive"
 msgstr "Lebend"
 
-#: resources/views/chart.phtml:318
+#: resources/views/chart.phtml:333
 msgid "Dead"
 msgstr "Verstorben"
 
-#: resources/views/chart.phtml:334
+#: resources/views/chart.phtml:349
 msgid ""
 "\"Complete\" means an individual with a media for birth/baptism, marriage "
 "and death/burial."
 msgstr ""
-"\"Vollständig\" bedeutet, dass für eine Person Medien für Geburt/Taufe, "
+"\"Vollständig\" bedeutet, dass für eine Person Daten für Geburt/Taufe, "
 "Heirat und Tod/Beerdigung vorliegen."
 
-#: resources/views/chart.phtml:342
+#: resources/views/chart.phtml:357
 msgid "Living"
 msgstr "Lebende Personen"
 
 #~ msgid "Branch Statistics"
-#~ msgstr "Statistik der Branche einer Person"
+#~ msgstr "Vorfahrenstatistik einer Person"
 
 #~ msgid "Statistics of %s"
-#~ msgstr "Branchenstatistik %s"
+#~ msgstr "Vorfahrenstatistik von %s"
 
 #~ msgid "self"
 #~ msgstr "Proband"
 
 #~ msgid "Individuals"
-#~ msgstr "Individus"
+#~ msgstr "Personen"
 
 #~ msgid "Total living"
-#~ msgstr "Nombre d'individus vivant"
+#~ msgstr "Summe der Lebenden"

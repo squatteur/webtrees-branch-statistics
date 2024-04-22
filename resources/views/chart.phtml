@@ -433,7 +433,7 @@ if (!empty($name_alive)) {
     }
 
     /**
-     * Bool based on the presence of a media for the event : BIRT or CHR, DEAT or BURI and MARR
+     * Get a symbol based on the presence of a media for the event : ° to BIRT or CHR or BAPM, and  + to DEAT or BURI or CREM
      *
      * @param Individual $person Individual instance
      * @param string $event_type 
@@ -444,9 +444,9 @@ if (!empty($name_alive)) {
     {
         //if (preg_match_all('/\n1 (?:' . $event_type . ').*(?:\n[2-9].*)*(?:\n2 OBJE (.+))/', $person->getGedcom(), $ged_obje, PREG_SET_ORDER))
         if (preg_match_all('/\n1 (?:' . $event_type . ').*(?:\n[2-9].*)*(?:\n2 OBJE (.+))/', $person->gedcom(), $ged_obje, PREG_SET_ORDER)) {
-            if (($event_type == 'BIRT') || ($event_type == 'CHR')) {
+            if (($event_type == 'BIRT') || ($event_type == 'CHR') || ($event_type == 'BAPM')) {
                 return TRUE;
-            } elseif (($event_type == 'DEAT') || ($event_type == 'BURI')) {
+            } elseif (($event_type == 'DEAT') || ($event_type == 'BURI') || ($event_type == 'CREM')) {
                 return TRUE;
             }
         }
@@ -454,8 +454,8 @@ if (!empty($name_alive)) {
             //if (preg_match_all('/\n1 (?:' . $event_type . ').*/', $person->getGedcom(), $ged_obje, PREG_SET_ORDER)) {
             if (preg_match_all('/\n1 (?:' . $event_type . ').*/', $person->gedcom(), $ged_obje, PREG_SET_ORDER)) {
                 foreach ($person->spouseFamilies() as $family) {
-                    if (getFirstFactFam($family, 'MARR')) {
-                        if (getFirstFactFam($family, 'OBJE')) {
+                    if ($family->getMarriage()) {
+                        if ($family->facts(['OBJE'])->first()) {
                             return TRUE;
                         }
                     }

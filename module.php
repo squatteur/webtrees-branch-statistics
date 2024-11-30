@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Squatteur\Webtrees;
 
 use Composer\Autoload\ClassLoader;
+use Fisharebest\Webtrees\Services\ChartService;
 use Squatteur\Webtrees\BranchStatistics\Module;
 
 // Register our namespace
@@ -20,4 +21,4 @@ $loader->addPsr4(
 $loader->register();
 
 // Create and return instance of the module
-return app(Module::class);
+return new Module(new ChartService());

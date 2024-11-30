@@ -19,20 +19,20 @@ use Fisharebest\Webtrees\Module\ModuleChartInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Registry;
 use Fisharebest\Webtrees\View;
+use Fisharebest\Webtrees\Webtrees;
 use Squatteur\Webtrees\BranchStatistics\Traits\ModuleChartTrait;
 use Squatteur\Webtrees\BranchStatistics\Traits\ModuleCustomTrait;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-use function app;
 use function is_string;
 use function max;
 use function min;
 use function route;
 
 /**
- * Fan chart module class.
+ * Branch statistics module class.
  *
  * @author  Bestel Squatteur <bestel@squatteur.net>
  * @license https://opensource.org/licenses/GPL-3.0 GNU General Public License v3.0
@@ -82,7 +82,7 @@ class Module extends AbstractModule implements ModuleCustomInterface, ModuleChar
 
     public function boot(): void
     {
-        $router_container = app(RouterContainer::class);
+        $router_container = self::getFromContainer(RouterContainer::class);
 
         $router_container->getMap()
             ->get(static::class, static::ROUTE_URL, $this)
@@ -217,4 +217,20 @@ class Module extends AbstractModule implements ModuleCustomInterface, ModuleChar
         return $title;
     }
 
+    /**
+     * Get from container
+     *
+     * @param string $id
+     * 
+     * @return mixed
+     */
+    public static function getFromContainer(string $id) {
+
+        if (version_compare(Webtrees::VERSION, '2.2.0', '>=')) {
+            return Registry::container()->get($id);
+        }
+        else {
+            return app($id);
+        }    
+    }       
 }

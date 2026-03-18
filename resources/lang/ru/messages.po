@@ -1,136 +1,125 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Webtrees Branch Statistics\n"
-"POT-Creation-Date: 2026-03-18 12:50+0200\n"
-"PO-Revision-Date: 2026-03-18 12:57+0200\n"
-"Last-Translator: Reveritus\n"
-"Language-Team: \n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
-"X-Poedit-Basepath: ../../..\n"
-"X-Poedit-KeywordsList: translate\n"
-"X-Poedit-SearchPath-0: module.php\n"
-"X-Poedit-SearchPath-1: src/Module.php\n"
-"X-Poedit-SearchPath-2: src/Traits/ModuleChartTrait.php\n"
-"X-Poedit-SearchPath-3: src/Traits/ModuleCustomTrait.php\n"
-"X-Poedit-SearchPath-4: resources/views/chart.phtml\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Branch Statistics Webtrees\n"
+"Language: ru\n"
 
-#: src/Module.php:103 src/Module.php:211
+#: 
 msgid "Branch statistics"
-msgstr ""
+msgstr "Статистика ветвей"
 
-#: src/Module.php:113
+#: 
 msgid "Statistics of an individual’s ancestors."
-msgstr ""
+msgstr "Статистика предков персон."
 
-#: src/Module.php:214 src/Traits/ModuleChartTrait.php:38
-#, php-format
+#: 
 msgid "Branch statistics of %s"
-msgstr ""
+msgstr "Статистика ветвей %s"
 
-#: resources/views/chart.phtml:23
+#: 
 msgid "Individual"
-msgstr ""
+msgstr "Персона"
 
-#: resources/views/chart.phtml:32
+#: 
 msgid "Generations"
-msgstr ""
+msgstr "Поколения"
 
-#: resources/views/chart.phtml:42
+#: 
 msgid "view"
-msgstr ""
+msgstr "просмотр"
 
-#: resources/views/chart.phtml:250
+#: 
 msgid "Individual is not visible."
-msgstr ""
+msgstr "Персоны не видно."
 
-#: resources/views/chart.phtml:260
+#: 
 msgid "Generation"
-msgstr ""
+msgstr "Поколение"
 
-#: resources/views/chart.phtml:261
+#: 
 msgid "Total individuals"
-msgstr ""
+msgstr "Всего персон"
 
-#: resources/views/chart.phtml:262
+#: 
 msgid "Total individuals (cumulative)"
-msgstr ""
+msgstr "Общее количество персон (совокупно)"
 
-#: resources/views/chart.phtml:263
+#: 
 msgid "Time of life"
-msgstr ""
+msgstr "Время жизни"
 
-#: resources/views/chart.phtml:264
+#: 
 msgid "Ancestors"
-msgstr ""
+msgstr "Предки"
 
-#: resources/views/chart.phtml:290
+#: 
 msgid "Self"
-msgstr ""
+msgstr "Личность"
 
-#: resources/views/chart.phtml:293
+#: 
 msgid "Parents"
-msgstr ""
+msgstr "Родители"
 
-#: resources/views/chart.phtml:296
+#: 
 msgid "Grandparents"
-msgstr ""
+msgstr "Дедушки/бабушки"
 
-#: resources/views/chart.phtml:299
+#: 
 msgid "Great-grandparents"
-msgstr ""
+msgstr "Прадеды/прабабушки"
 
-#: resources/views/chart.phtml:302
-#, php-format
+#: 
 msgid "Great ×%s grandparents"
-msgstr ""
+msgstr "Пра ×%s дедушки/бабушки"
 
-#: resources/views/chart.phtml:329
+#: 
 msgid "Number of complete / found individuals"
-msgstr ""
+msgstr "Количество полных / найденных персон"
 
-#: resources/views/chart.phtml:330
+#: 
 msgid "Males"
-msgstr ""
+msgstr "Мужчины"
 
-#: resources/views/chart.phtml:331
+#: 
 msgid "Females"
-msgstr ""
+msgstr "Женщины"
 
-#: resources/views/chart.phtml:332
+#: 
 msgid "Alive"
-msgstr ""
+msgstr "Живы"
 
-#: resources/views/chart.phtml:333
+#: 
 msgid "Dead"
-msgstr ""
+msgstr "Умерли"
 
-#: resources/views/chart.phtml:349
-msgid ""
-"\"Complete\" means an individual with a media for birth/baptism, marriage "
-"and death/burial."
-msgstr ""
-""
+#: 
+msgid "\\\"Complete\\\" means an individual with a media for birth/baptism"
+msgstr "\\\"Полный\"\\ означает человека, имеющего свидетельство о рождении/крещении / браке / рождении / захоронении"
 
-#: resources/views/chart.phtml:357
+#: 
 msgid "Living"
-msgstr ""
+msgstr "Живущий"
 
-#~ msgid "Branch Statistics"
-#~ msgstr ""
+#: 
+msgid "Branch Statistics"
+msgstr "Статистика ветвей"
 
-#~ msgid "Statistics of %s"
-#~ msgstr ""
+#: 
+msgid "Statistics of %s"
+msgstr "Статистика %s"
 
-#~ msgid "self"
-#~ msgstr ""
+#: 
+msgid "self"
+msgstr "Личность"
 
-#~ msgid "Individuals"
-#~ msgstr ""
+#: 
+msgid "Individuals"
+msgstr "Персоны"
 
-#~ msgid "Total living"
-#~ msgstr ""
+#: 
+msgid "Total living"
+msgstr "Общая продолжительность жизни"
+

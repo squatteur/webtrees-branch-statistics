@@ -96,8 +96,12 @@ msgid "Dead"
 msgstr "Умерли"
 
 #: 
-msgid "\\\"Complete\\\" means an individual with a media for birth/baptism"
-msgstr "\\\"Полный\"\\ означает человека, имеющего свидетельство о рождении/крещении / браке / рождении / захоронении"
+msgid ""
+"\"Complete\" means an individual with a media for birth/baptism, marriage "
+"and death/burial."
+msgstr ""
+"\"Полный\" означает персону, имеющую свидетельство о рождении/крещении, браке "
+"и смерти/захоронении."
 
 #: 
 msgid "Living"

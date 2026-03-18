@@ -1,0 +1,136 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webtrees Branch Statistics\n"
+"POT-Creation-Date: 2026-03-18 12:50+0200\n"
+"PO-Revision-Date: 2026-03-18 12:57+0200\n"
+"Last-Translator: Reveritus\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-SearchPath-0: module.php\n"
+"X-Poedit-SearchPath-1: src/Module.php\n"
+"X-Poedit-SearchPath-2: src/Traits/ModuleChartTrait.php\n"
+"X-Poedit-SearchPath-3: src/Traits/ModuleCustomTrait.php\n"
+"X-Poedit-SearchPath-4: resources/views/chart.phtml\n"
+
+#: src/Module.php:103 src/Module.php:211
+msgid "Branch statistics"
+msgstr ""
+
+#: src/Module.php:113
+msgid "Statistics of an individual’s ancestors."
+msgstr ""
+
+#: src/Module.php:214 src/Traits/ModuleChartTrait.php:38
+#, php-format
+msgid "Branch statistics of %s"
+msgstr ""
+
+#: resources/views/chart.phtml:23
+msgid "Individual"
+msgstr ""
+
+#: resources/views/chart.phtml:32
+msgid "Generations"
+msgstr ""
+
+#: resources/views/chart.phtml:42
+msgid "view"
+msgstr ""
+
+#: resources/views/chart.phtml:250
+msgid "Individual is not visible."
+msgstr ""
+
+#: resources/views/chart.phtml:260
+msgid "Generation"
+msgstr ""
+
+#: resources/views/chart.phtml:261
+msgid "Total individuals"
+msgstr ""
+
+#: resources/views/chart.phtml:262
+msgid "Total individuals (cumulative)"
+msgstr ""
+
+#: resources/views/chart.phtml:263
+msgid "Time of life"
+msgstr ""
+
+#: resources/views/chart.phtml:264
+msgid "Ancestors"
+msgstr ""
+
+#: resources/views/chart.phtml:290
+msgid "Self"
+msgstr ""
+
+#: resources/views/chart.phtml:293
+msgid "Parents"
+msgstr ""
+
+#: resources/views/chart.phtml:296
+msgid "Grandparents"
+msgstr ""
+
+#: resources/views/chart.phtml:299
+msgid "Great-grandparents"
+msgstr ""
+
+#: resources/views/chart.phtml:302
+#, php-format
+msgid "Great ×%s grandparents"
+msgstr ""
+
+#: resources/views/chart.phtml:329
+msgid "Number of complete / found individuals"
+msgstr ""
+
+#: resources/views/chart.phtml:330
+msgid "Males"
+msgstr ""
+
+#: resources/views/chart.phtml:331
+msgid "Females"
+msgstr ""
+
+#: resources/views/chart.phtml:332
+msgid "Alive"
+msgstr ""
+
+#: resources/views/chart.phtml:333
+msgid "Dead"
+msgstr ""
+
+#: resources/views/chart.phtml:349
+msgid ""
+"\"Complete\" means an individual with a media for birth/baptism, marriage "
+"and death/burial."
+msgstr ""
+""
+
+#: resources/views/chart.phtml:357
+msgid "Living"
+msgstr ""
+
+#~ msgid "Branch Statistics"
+#~ msgstr ""
+
+#~ msgid "Statistics of %s"
+#~ msgstr ""
+
+#~ msgid "self"
+#~ msgstr ""
+
+#~ msgid "Individuals"
+#~ msgstr ""
+
+#~ msgid "Total living"
+#~ msgstr ""

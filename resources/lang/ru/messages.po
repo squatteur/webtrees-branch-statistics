@@ -4,12 +4,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
-"Project-Id-Version: Branch Statistics Webtrees\n"
+"Project-Id-Version: Branch statistics Webtrees\n"
 "Language: ru\n"
 
 #: 
 msgid "Branch statistics"
-msgstr "Статистика ветвей"
+msgstr "Статистика ветви"
 
 #: 
 msgid "Statistics of an individual’s ancestors."
@@ -17,7 +17,7 @@ msgstr "Статистика предков персон."
 
 #: 
 msgid "Branch statistics of %s"
-msgstr "Статистика ветвей %s"
+msgstr "Статистика ветви %s"
 
 #: 
 msgid "Individual"
@@ -33,7 +33,7 @@ msgstr "просмотр"
 
 #: 
 msgid "Individual is not visible."
-msgstr "Персоны не видно."
+msgstr "Персон не видно."
 
 #: 
 msgid "Generation"
@@ -57,7 +57,7 @@ msgstr "Предки"
 
 #: 
 msgid "Self"
-msgstr "Личность"
+msgstr "Сам (а)"
 
 #: 
 msgid "Parents"
@@ -96,20 +96,16 @@ msgid "Dead"
 msgstr "Умерли"
 
 #: 
-msgid ""
-"\"Complete\" means an individual with a media for birth/baptism, marriage "
-"and death/burial."
-msgstr ""
-"\"Полный\" означает персону, имеющую свидетельство о рождении/крещении, браке "
-"и смерти/захоронении."
+msgid "\"Complete\" means an individual with a media for birth/baptism, marriage and death/burial."
+msgstr "\"Полный\" означает персону, имеющую свидетельство о рождении/крещении, браке и смерти/захоронении."
 
 #: 
 msgid "Living"
-msgstr "Живущий"
+msgstr "Живущиe"
 
 #: 
 msgid "Branch Statistics"
-msgstr "Статистика ветвей"
+msgstr "Статистика ветви"
 
 #: 
 msgid "Statistics of %s"
@@ -117,7 +113,7 @@ msgstr "Статистика %s"
 
 #: 
 msgid "self"
-msgstr "Личность"
+msgstr "сам (а)"
 
 #: 
 msgid "Individuals"

@@ -1,0 +1,129 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Branch Statistics Webtrees\n"
+"Language: en\n"
+
+#: 
+msgid "Branch statistics"
+msgstr "Branch statistics"
+
+#: 
+msgid "Statistics of an individual’s ancestors."
+msgstr "Statistics of an individual’s ancestors."
+
+#: 
+msgid "Branch statistics of %s"
+msgstr "Branch statistics of %s"
+
+#: 
+msgid "Individual"
+msgstr "Individual"
+
+#: 
+msgid "Generations"
+msgstr "Generations"
+
+#: 
+msgid "view"
+msgstr "view"
+
+#: 
+msgid "Individual is not visible."
+msgstr "Individual is not visible."
+
+#: 
+msgid "Generation"
+msgstr "Generation"
+
+#: 
+msgid "Total individuals"
+msgstr "Total individuals"
+
+#: 
+msgid "Total individuals (cumulative)"
+msgstr "Total individuals (cumulative)"
+
+#: 
+msgid "Time of life"
+msgstr "Time of life"
+
+#: 
+msgid "Ancestors"
+msgstr "Ancestors"
+
+#: 
+msgid "Self"
+msgstr "Self"
+
+#: 
+msgid "Parents"
+msgstr "Parents"
+
+#: 
+msgid "Grandparents"
+msgstr "Grandparents"
+
+#: 
+msgid "Great-grandparents"
+msgstr "Great-grandparents"
+
+#: 
+msgid "Great ×%s grandparents"
+msgstr "Great ×%s grandparents"
+
+#: 
+msgid "Number of complete / found individuals"
+msgstr "Number of complete / found individuals"
+
+#: 
+msgid "Males"
+msgstr "Males"
+
+#: 
+msgid "Females"
+msgstr "Females"
+
+#: 
+msgid "Alive"
+msgstr "Alive"
+
+#: 
+msgid "Dead"
+msgstr "Dead"
+
+#: 
+msgid ""
+"\"Complete\" means an individual with a media for birth/baptism, marriage "
+"and death/burial."
+msgstr ""
+"\"Complete\" means an individual with a media for birth/baptism, marriage "
+"and death/burial."
+
+#: 
+msgid "Living"
+msgstr "Living"
+
+#: 
+msgid "Branch Statistics"
+msgstr "Branch Statistics"
+
+#: 
+msgid "Statistics of %s"
+msgstr "Statistics of %s"
+
+#: 
+msgid "self"
+msgstr "self"
+
+#: 
+msgid "Individuals"
+msgstr "Individuals"
+
+#: 
+msgid "Total living"
+msgstr "Total living"
+

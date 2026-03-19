@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Branch statistics Webtrees\n"
+"Language: ru\n"
+
+#: 
+msgid "Branch statistics"
+msgstr "Статистика ветви"
+
+#: 
+msgid "Statistics of an individual’s ancestors."
+msgstr "Статистика предков персон."
+
+#: 
+msgid "Branch statistics of %s"
+msgstr "Статистика ветви %s"
+
+#: 
+msgid "Individual"
+msgstr "Персона"
+
+#: 
+msgid "Generations"
+msgstr "Поколения"
+
+#: 
+msgid "view"
+msgstr "просмотр"
+
+#: 
+msgid "Individual is not visible."
+msgstr "Персон не видно."
+
+#: 
+msgid "Generation"
+msgstr "Поколение"
+
+#: 
+msgid "Total individuals"
+msgstr "Всего персон"
+
+#: 
+msgid "Total individuals (cumulative)"
+msgstr "Общее количество персон (совокупно)"
+
+#: 
+msgid "Time of life"
+msgstr "Время жизни"
+
+#: 
+msgid "Ancestors"
+msgstr "Предки"
+
+#: 
+msgid "Self"
+msgstr "Сам (а)"
+
+#: 
+msgid "Parents"
+msgstr "Родители"
+
+#: 
+msgid "Grandparents"
+msgstr "Дедушки/бабушки"
+
+#: 
+msgid "Great-grandparents"
+msgstr "Прадеды/прабабушки"
+
+#: 
+msgid "Great ×%s grandparents"
+msgstr "Пра ×%s дедушки/бабушки"
+
+#: 
+msgid "Number of complete / found individuals"
+msgstr "Количество полных / найденных персон"
+
+#: 
+msgid "Males"
+msgstr "Мужчины"
+
+#: 
+msgid "Females"
+msgstr "Женщины"
+
+#: 
+msgid "Alive"
+msgstr "Живы"
+
+#: 
+msgid "Dead"
+msgstr "Умерли"
+
+#: 
+msgid "\"Complete\" means an individual with a media for birth/baptism, marriage and death/burial."
+msgstr "\"Полный\" означает персону, имеющую свидетельство о рождении/крещении, браке и смерти/захоронении."
+
+#: 
+msgid "Living"
+msgstr "Живущиe"
+
+#: 
+msgid "Branch Statistics"
+msgstr "Статистика ветви"
+
+#: 
+msgid "Statistics of %s"
+msgstr "Статистика %s"
+
+#: 
+msgid "self"
+msgstr "сам (а)"
+
+#: 
+msgid "Individuals"
+msgstr "Персоны"
+
+#: 
+msgid "Total living"
+msgstr "Общая продолжительность жизни"
+
